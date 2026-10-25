@@ -19,6 +19,24 @@ if (continueButton && nicknameInput) {
             return;
         }
 
+        const oldNickname =
+            localStorage.getItem("replayNickname");
+
+        // reset progress for a different nickname
+        if (oldNickname !== nickname) {
+
+            localStorage.removeItem("replayXPState");
+            localStorage.removeItem("replayTrophyProgress");
+
+            localStorage.removeItem("replayCurrentChallenges");
+            localStorage.removeItem("replayCompletedChallenges");
+            localStorage.removeItem("replayChallengeHistory");
+
+            localStorage.removeItem("replayMissedHobbies");
+            localStorage.removeItem("replayNewHobbies");
+        }
+
+        // save nickname
         localStorage.setItem("replayNickname", nickname);
 
         window.location.href = "questions.html";
