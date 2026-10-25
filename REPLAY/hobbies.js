@@ -22,6 +22,7 @@ const hobbyList = [
     "Photography",
     "Pottery",
     "Reading",
+    "Running",
     "Scrapbooking",
     "Sewing",
     "Singing",

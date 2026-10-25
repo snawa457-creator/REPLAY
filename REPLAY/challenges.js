@@ -234,6 +234,10 @@ function completeChallenge(id, checked, checkbox) {
         try {
             // the shared XP system prevents duplicate rewards
             ReplayXP.award("daily", completionID);
+
+// update trophy progress
+ReplayTrophies.record(challenge.hobby, completionID);
+
         } catch (error) {
             checkbox.checked = challenge.completed;
 

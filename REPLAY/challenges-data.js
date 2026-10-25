@@ -59,6 +59,20 @@ const challengeDatabase = {
         "Spend 15 minutes practicing an instrument."
     ],
 
+"Running": [
+    "Go for a 5-minute jog.",
+    "Try running around your neighbourhood.",
+    "Run for 10 minutes at your own pace.",
+    "Find a new running route.",
+    "Try alternating walking and running.",
+    "Listen to your favourite music while jogging.",
+    "Go for a short morning run.",
+    "Try running somewhere scenic.",
+    "Challenge yourself to run a little farther.",
+    "Complete a 15-minute jog."
+],
+
+
     "Pottery": [
         "Sketch three pottery designs.",
         "Create a small object using air dry clay.",
