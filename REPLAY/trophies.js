@@ -46,7 +46,6 @@ const trophies = [
     }
 ];
 
-
 /* load saved progress */
 
 let trophyProgress = {};
@@ -135,8 +134,20 @@ function displayTrophies() {
             ? "trophy-item unlocked"
             : "trophy-item locked";
 
-        item.innerHTML = `
+        // trophy image
+        const trophyImage = `
             <img src="images/${image}" alt="${trophy.name} trophy">
+        `;
+
+        // link running trophy to game
+        const trophyDisplay =
+            trophy.id === "running" && unlocked
+                ? `<a href="running.html" class="trophy-game-link" aria-label="Play running game">${trophyImage}</a>`
+                : trophyImage;
+
+        // show trophy
+        item.innerHTML = `
+            ${trophyDisplay}
             <div class="trophy-name">${trophy.name}</div>
             <div class="trophy-status">${status}</div>
             <div class="trophy-shelf"></div>

@@ -218,3 +218,16 @@ h1 {
         top: 12px;
     }
 }
+
+
+/* running game link */
+
+.trophy-game-link {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.trophy-game-link:hover img {
+    transform: scale(1.1);
+}
+
