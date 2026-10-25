@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RE:PLAY | Your Nickname</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- replay logo -->
+    <a href="index.html"
+       class="replay-logo-link"
+       aria-label="RE:PLAY homepage">
+
+        <img src="images/replaylogo.png" alt="RE:PLAY">
+
+    </a>
+
+    <!-- navigation -->
+    <nav class="replay-navigation" aria-label="Page navigation">
+
+        <a href="index.html#introduction">
+            ← Back
+        </a>
+
+    </nav>
+
+    <main>
+
+        <!-- nickname page -->
+        <section id="nickname">
+
+            <div class="nickname-row">
+
+                <h2>What should we call you?</h2>
+
+                <input
+                    type="text"
+                    id="nicknameInput"
+                    maxlength="20"
+                    placeholder="Your nickname..."
+                    aria-label="Enter your nickname"
+                    autocomplete="nickname"
+                >
+
+            </div>
+
+            <!-- continue button -->
+            <button
+                type="button"
+                id="continueButton"
+                class="mybtn mybtn1"
+            >
+                Continue →
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

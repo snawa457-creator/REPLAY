@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RE:PLAY | Your Hobbies</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- replay logo -->
+    <a href="index.html" class="replay-logo-link" aria-label="RE:PLAY homepage">
+        <img src="images/replaylogo.png" alt="RE:PLAY">
+    </a>
+
+    <!-- page nav -->
+    <nav class="replay-navigation" aria-label="Page navigation">
+        <a href="nickname.html">← Back</a>
+    </nav>
+
+    <main>
+
+        <!-- questions -->
+        <section id="questionnaire">
+
+            <h2>Let's get to know you!</h2>
+
+            <!-- q 1 -->
+            <div class="question">
+
+                <h3>1. What hobbies do you miss doing?</h3>
+
+                <div class="hobby-buttons" id="missedHobbies">
+
+                    <button type="button" class="hobby-btn" data-hobby="Painting">Painting</button>
+                    <button type="button" class="hobby-btn" data-hobby="Reading">Reading</button>
+                    <button type="button" class="hobby-btn" data-hobby="Photography">Photography</button>
+                    <button type="button" class="hobby-btn" data-hobby="Dancing">Dancing</button>
+                    <button type="button" class="hobby-btn" data-hobby="Baking">Baking</button>
+                    <button type="button" class="hobby-btn" data-hobby="Gaming">Gaming</button>
+                    <button type="button" class="hobby-btn" data-hobby="Writing">Writing</button>
+                    <button type="button" class="hobby-btn" data-hobby="Music">Music</button>
+
+                </div>
+
+                <!-- other options -->
+                <div class="other-hobby">
+
+                    <label for="missedOther">Other:</label>
+
+                    <input
+                        type="text"
+                        id="missedOther"
+                        list="missedHobbiesSuggestions"
+                        placeholder="Search hobbies..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        class="add-hobby"
+                        data-target="missedHobbies"
+                    >
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- q 2 -->
+            <div class="question">
+
+                <h3>2. What hobbies would you like to explore?</h3>
+
+                <div class="hobby-buttons" id="newHobbies">
+
+                    <button type="button" class="hobby-btn" data-hobby="Pottery">Pottery</button>
+                    <button type="button" class="hobby-btn" data-hobby="Crochet">Crochet</button>
+                    <button type="button" class="hobby-btn" data-hobby="Gardening">Gardening</button>
+                    <button type="button" class="hobby-btn" data-hobby="Journaling">Journaling</button>
+                    <button type="button" class="hobby-btn" data-hobby="Cooking">Cooking</button>
+                    <button type="button" class="hobby-btn" data-hobby="Hiking">Hiking</button>
+                    <button type="button" class="hobby-btn" data-hobby="Knitting">Knitting</button>
+                    <button type="button" class="hobby-btn" data-hobby="Digital Art">Digital Art</button>
+
+                </div>
+
+                <!-- other options -->
+                <div class="other-hobby">
+
+                    <label for="newOther">Other:</label>
+
+                    <input
+                        type="text"
+                        id="newOther"
+                        list="newHobbiesSuggestions"
+                        placeholder="Search hobbies..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        class="add-hobby"
+                        data-target="newHobbies"
+                    >
+                        Add +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- cont button -->
+            <button
+                type="button"
+                id="hobbiesContinue"
+                class="mybtn mybtn1"
+            >
+                Continue →
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- javascript -->
+    <script src="hobbies.js"></script>
+    <script src="questions.js"></script>
+
+</body>
+
+</html>
