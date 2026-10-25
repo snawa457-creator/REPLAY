@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RE:PLAY | Activity Vending Machine</title>
+
+    <link rel="stylesheet" href="vending.css">
+
+    <script src="xp.js" defer></script>
+    <script src="vending.js" defer></script>
+    <script src="navigation.js" defer></script>
+    <script src="audio.js" defer></script>
+</head>
+
+<body>
+
+    <!-- homepage logo -->
+    <a href="index.html"
+       class="replay-logo-link"
+       aria-label="Back to homepage">
+        <img src="images/replaylogo.png" alt="RE:PLAY logo">
+    </a>
+
+    <main class="vending-page">
+
+        <!-- intro -->
+        <section class="intro" aria-labelledby="intro-title">
+
+            <a class="back-link" href="challenges.html">
+                ← My challenges
+            </a>
+
+            <div class="intro-copy">
+
+                <h1 id="intro-title">
+                    The mood<br>machine<span class="period">.</span>
+                </h1>
+
+                <p>How are you feeling today?</p>
+
+                <p class="hint">
+                    Press a mood button and let the machine
+                    surprise you with something to try.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- vending machine -->
+        <section class="machine-area" aria-label="Activity vending machine">
+
+            <div class="machine" id="machine">
+
+                <!-- machine top -->
+                <div class="machine-top">
+
+                    <span class="bulb"></span>
+
+                    <span class="machine-logo">RE:PLAY</span>
+
+                    <span class="bulb"></span>
+
+                </div>
+
+                <!-- machine inside -->
+                <div class="machine-inner">
+
+                    <!-- mood display -->
+                    <div class="machine-display">
+
+                        <div class="display-header">
+                            ★ PICK YOUR MOOD ★
+                        </div>
+
+                        <!-- mood buttons -->
+                        <div class="mood-grid">
+
+                            <!-- sad -->
+                            <button
+                                type="button"
+                                class="mood-button"
+                                data-mood="sad"
+                                aria-label="Sad"
+                            >
+                                <img src="images/sad.png" alt="">
+                                <span>Sad</span>
+                            </button>
+
+                            <!-- energized -->
+                            <button
+                                type="button"
+                                class="mood-button"
+                                data-mood="energized"
+                                aria-label="Energized"
+                            >
+                                <img src="images/energized.png" alt="">
+                                <span>Energized</span>
+                            </button>
+
+                            <!-- relaxed -->
+                            <button
+                                type="button"
+                                class="mood-button"
+                                data-mood="relaxed"
+                                aria-label="Relaxed"
+                            >
+                                <img src="images/relaxed.png" alt="">
+                                <span>Relaxed</span>
+                            </button>
+
+                            <!-- creative -->
+                            <button
+                                type="button"
+                                class="mood-button"
+                                data-mood="creative"
+                                aria-label="Creative"
+                            >
+                                <img src="images/creative.png" alt="">
+                                <span>Creative</span>
+                            </button>
+
+                            <!-- bored -->
+                            <button
+                                type="button"
+                                class="mood-button"
+                                data-mood="bored"
+                                aria-label="Bored"
+                            >
+                                <img src="images/bored.png" alt="">
+                                <span>Bored</span>
+                            </button>
+
+                            <!-- angry -->
+                            <button
+                                type="button"
+                                class="mood-button"
+                                data-mood="angry"
+                                aria-label="Angry"
+                            >
+                                <img src="images/angry.png" alt="">
+                                <span>Angry</span>
+                            </button>
+
+                            <!-- happy -->
+                            <button
+                                type="button"
+                                class="mood-button"
+                                data-mood="happy"
+                                aria-label="Happy"
+                            >
+                                <img src="images/happy.png" alt="">
+                                <span>Happy</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ticket dispenser -->
+                    <div class="machine-lower">
+
+                        <div
+                            class="ticket-slot"
+                            aria-label="Challenge ticket dispenser"
+                        >
+
+                            <!-- ticket slot -->
+                            <div class="slot-hole">
+
+                                <div class="ticket" id="ticket">
+                                    ★ YOUR CHALLENGE ★
+                                </div>
+
+                            </div>
+
+                            <span>TAKE YOUR TICKET ↓</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- activity popup -->
+    <div class="modal-backdrop" id="challengeModal" hidden>
+
+        <section
+            class="challenge-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Your activity challenge"
+            aria-describedby="challengeText"
+        >
+
+            <!-- close button -->
+            <button
+                type="button"
+                class="close-modal"
+                id="closeModal"
+                aria-label="Close challenge"
+            >
+                ×
+            </button>
+
+            <!-- mood image -->
+            <img
+                id="modalMoodImage"
+                src="images/happy.png"
+                alt=""
+                class="modal-icon"
+            >
+
+            <!-- random activity -->
+            <p id="challengeText"></p>
+
+            <!-- popup buttons -->
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    id="anotherChallenge"
+                    class="action secondary"
+                >
+                    Try another ↻
+                </button>
+
+                <button
+                    type="button"
+                    id="doneChallenge"
+                    class="action primary"
+                >
+                    Completed! +2 XP ✓
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
